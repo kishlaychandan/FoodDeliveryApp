@@ -1,0 +1,12 @@
+.nav{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.nav a{
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+}
