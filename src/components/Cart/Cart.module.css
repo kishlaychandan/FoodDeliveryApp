@@ -1,0 +1,83 @@
+/* Cart.module.css */
+
+.carts {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  .carts h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .cart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cart img {
+    width: 270px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 0.8rem;
+  }
+  
+  .cart div {
+    /* flex: 1; */
+    font-size: 1.3rem;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart div button {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+  }
+  
+  .total {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .total button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .total button:hover {
+    background-color: #0056b3;
+  }
+  
+  .total{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .total button{
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+  }
+  .total button:hover{
+    background-color: black;
+    color: white;
+  }

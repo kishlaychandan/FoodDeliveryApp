@@ -1,0 +1,135 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar .left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .left h1 {
+    margin-left: 1rem;
+}
+
+.navbar .right {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar .right ul {
+    display: flex;
+    color: white;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .right ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar .right button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.navbar .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        /* flex-direction: column; */
+        align-items: flex-start;
+        padding: 1rem 3rem;
+    }
+
+    .navbar .right {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        /* width: 100%; */
+        position: absolute;
+        top:4rem;
+        right: 10px;
+        padding: 1rem 2.5rem;
+        background-color: black;
+        border-radius: 0.7rem;
+        gap: 1rem;
+    }
+    
+    .navbar .right ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .navbar .right ul li a {
+        font-size: 1rem;;
+        font-size: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .right button {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+
+    .navbar .right.active {
+        display: flex;
+    }
+
+    .navbar .hamburger.open div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 8px;
+        position: relative;
+    }
+
+    .navbar .hamburger.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar .hamburger.open div:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -8px;
+        position: relative;
+    }
+}

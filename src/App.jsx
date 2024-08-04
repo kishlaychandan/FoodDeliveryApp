@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import Signup from "./Signup/Signup";
-import SignIn from "./SignIn/Signin";
-import Home from "./Home/Home";
-import Dashboard from "./Dashboard/Dashboard";
+import Signup from "./components/Signup/Signup";
+import SignIn from "./components/SignIn/Signin";
+import Home from "./components/Home/Home";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Cart from './components/Cart/Cart'
 import { auth } from "./firebaseConfig";
 import AuthContext from "./AuthContext";
 import ProtectedRoute from "./protectedRoute"
@@ -60,6 +61,8 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/home" element={<Home />} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+            
             {/* <Route path="/" element={<ProtectedRoute><Signup /></ProtectedRoute>} />
             <Route path="/signup" element={<ProtectedRoute><Signup /></ProtectedRoute>} />
             <Route path="/signin" element={<ProtectedRoute><SignIn /></ProtectedRoute>} /> */}

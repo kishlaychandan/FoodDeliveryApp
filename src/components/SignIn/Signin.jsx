@@ -1,6 +1,6 @@
 import style from "./Signin.module.css";
 import React, { useContext, useState } from "react";
-import AuthContext from "../AuthContext";
+import AuthContext from '../../AuthContext';
 import { Link } from "react-router-dom";
 function Signin() {
   const [email, setEmail] = useState("");

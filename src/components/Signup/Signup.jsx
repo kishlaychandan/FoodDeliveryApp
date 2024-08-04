@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import style from "./Signup.module.css";
 import { useState } from "react";
-import AuthContext from "../AuthContext";
+import AuthContext from '../../AuthContext';
 import { Link } from "react-router-dom";
 function Signup() {
   // sing up

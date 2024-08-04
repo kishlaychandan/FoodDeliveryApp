@@ -1,0 +1,26 @@
+.banner{
+    width: 100%;
+    /* height: auto; */
+    min-height: 25rem;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/076/168/small/food-delivery-banner-design-flat-design-online-order-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.menuLink{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    top: 40%;
+    cursor: pointer;
+    left: 45%;
+    font-size: 2rem;
+    margin-left: 1rem;
+    padding:0.5rem 1.2rem;
+    background-color: gray;
+    border-radius: 0.5rem;
+}
+.menuLink:hover{
+    background-color: black;
+}

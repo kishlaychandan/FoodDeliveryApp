@@ -1,0 +1,18 @@
+/* Search.module.css */
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.searchInput {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
