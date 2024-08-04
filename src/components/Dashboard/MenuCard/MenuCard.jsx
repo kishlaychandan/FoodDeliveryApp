@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./MenuCard.module.css";
-
+import { FcRating } from "react-icons/fc";
 function MenuCard({ filteredData }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [cartItems, setCartItems] = useState(() => {
@@ -72,10 +72,12 @@ function MenuCard({ filteredData }) {
             <p>{item.name}</p>
             <p>{item.price}</p>
             <p>{item.category}</p>
-            <p className={style.rating}>{item.rating} *</p>
-            <button onClick={() => handleAddToCart(item)}>
+            <p className={style.rating}>{item.rating} <FcRating /></p>
+            <div className={style.btn}>
+            <button className={style.btn01} onClick={() => handleAddToCart(item)}>
               {cartItems.find(cartItem => cartItem.id === item.id) ? 'Remove from Cart' : 'Add to Cart'}
             </button>
+            </div>
           </div>
         ))}
       </div>

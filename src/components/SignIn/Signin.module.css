@@ -2,6 +2,9 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
 }
 .nav a{
     padding: 0.8rem 1rem;
@@ -9,4 +12,5 @@
     background-color: black;
     color:white;
     cursor:pointer;
+    text-decoration: none;
 }

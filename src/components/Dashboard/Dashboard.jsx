@@ -14,11 +14,11 @@ function Dashboard() {
   return (
     
     <>
-    <div className={style.dahboard}>
+    <div className={style.dashboard}>
         <Navbar />
         <Banner/>
         <Search data={data} setFilteredData={setFilteredData}/>
-        <MenuCard filteredData={filteredData}/>
+        <MenuCard filteredData={filteredData} />
     </div>
     </>
   )

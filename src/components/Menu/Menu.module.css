@@ -20,6 +20,7 @@
 }
 .menu .cards .card{
     width: 15%;
+    min-width: 14rem;
     display: flex;
     background-color: gray;
     flex-direction: column;

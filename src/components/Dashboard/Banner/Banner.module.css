@@ -2,7 +2,9 @@
     width: 100%;
     /* height: auto; */
     min-height: 25rem;
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/076/168/small/food-delivery-banner-design-flat-design-online-order-vector.jpg");
+    /* background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/076/168/small/food-delivery-banner-design-flat-design-online-order-vector.jpg"); */
+    /* background-image: url("https://us.123rf.com/450wm/nataliamir/nataliamir2002/nataliamir200200053/140875669-banner-colourful-herbs-and-spices-and-dry-vegetable-for-cooking-in-wooden-spoons-and-bowls-on-dark.jpg"); */
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/032/028/929/small/spices-and-herbs-with-measuring-spoons-photo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -12,9 +14,9 @@
     position: absolute;
     text-decoration: none;
     color: white;
-    top: 40%;
+    top: 45%;
     cursor: pointer;
-    left: 45%;
+    left: 40%;
     font-size: 2rem;
     margin-left: 1rem;
     padding:0.5rem 1.2rem;
