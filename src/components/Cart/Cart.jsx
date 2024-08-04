@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./Cart.module.css";
 import Navbar from "../Navbar/Navbar";
-import LocationPicker from "../Location/LocationPicker";
 
 function Cart() {
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem("cartItems");
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const navigate = useNavigate();
 
   const handleIncrement = (item) => {
     setCartItems((prevCart) =>
@@ -35,9 +36,9 @@ function Cart() {
     );
   };
 
-  const handleProceedToPay = () => {
-    // Handle payment logic
-    alert("Proceeding to payment");
+  const handleProceedToOrder = () => {
+    {if(cartItems.length===0) return alert("Cart is empty")}
+    navigate("/order-summary");
   };
 
   useEffect(() => {
@@ -52,7 +53,6 @@ function Cart() {
   return (
     <>
       <Navbar />
-      <LocationPicker />
       <div className={style.carts}>
         <h2>Cart</h2>
         {cartItems.length === 0 ? (
@@ -80,7 +80,7 @@ function Cart() {
         )}
         <div className={style.total}>
           <p>Total: ${totalPrice.toFixed(2)}</p>
-          <button onClick={handleProceedToPay}>Proceed to Pay</button>
+          <button onClick={handleProceedToOrder}>Proceed to Order</button>
         </div>
       </div>
     </>

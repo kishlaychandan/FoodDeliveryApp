@@ -5,6 +5,7 @@ import SignIn from "./components/SignIn/Signin";
 import Home from "./components/Home/Home";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Cart from './components/Cart/Cart'
+import OrderSummary from "./components/OrderSummary/OrderSummary";
 import { auth } from "./firebaseConfig";
 import AuthContext from "./AuthContext";
 import ProtectedRoute from "./protectedRoute"
@@ -65,6 +66,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+            <Route path="/order-summary" element={<ProtectedRoute><OrderSummary /></ProtectedRoute>} />
             <Route path="/orderStatus" element={<ProtectedRoute><OrderStatus/></ProtectedRoute>} />
             <Route path="/contact" element={<ProtectedRoute><Contact/></ProtectedRoute>} />
             <Route path="/menu" element={<ProtectedRoute><Menu /></ProtectedRoute>} />

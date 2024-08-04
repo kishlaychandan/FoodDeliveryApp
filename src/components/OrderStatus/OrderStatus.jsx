@@ -1,13 +1,61 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
+import React, { useState, useEffect } from "react";
+import style from "./OrderStatus.module.css";
+import Navbar from "../Navbar/Navbar";
 
 function OrderStatus() {
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const savedOrders = localStorage.getItem("orders");
+    if (savedOrders) {
+      setOrders(JSON.parse(savedOrders));
+    }
+  }, []);
+
+  const handleDeleteOrder = (orderId) => {
+    const updatedOrders = orders.filter((order) => order.orderId !== orderId);
+    setOrders(updatedOrders);
+    localStorage.setItem("orders", JSON.stringify(updatedOrders));
+  };
+
+  const handleClearAll = () => {
+    setOrders([]);
+    localStorage.removeItem("orders");
+  };
+
   return (
     <>
-    <Navbar />
-    <h1>OrderStatus</h1>
+      <Navbar />
+      <div className={style.orderStatus}>
+        <h2>Order Status</h2>
+        {orders.length === 0 ? (
+          <p>No orders found.</p>
+        ) : (
+          <div>
+            {orders.map((order) => (
+              <div key={order.orderId} className={style.orderItem}>
+                <div className={style.orderDetails}>
+                  <h3>Order ID: {order.orderId}</h3>
+                  <p>Date: {order.date}</p>
+                  <p>Address: {order.address}</p>
+                  <p>
+                    Total Price: ₹
+                    {order.totalPrice ? order.totalPrice.toFixed(2) : "N/A"}
+                  </p>
+                </div>
+                <button onClick={() => handleDeleteOrder(order.orderId)}>
+                  Delete Order
+                </button>
+              </div>
+            ))}
+            <button onClick={handleClearAll} className={style.clearAll}>
+              Clear All Orders
+            </button>
+          </div>
+        )}
+      </div>
     </>
-  )
+  );
 }
 
-export default OrderStatus
+export default OrderStatus;
