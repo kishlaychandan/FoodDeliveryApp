@@ -16,35 +16,52 @@
     font-size: 2.5rem;
     font-weight: bold;
   }
-  
+  .cartItem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
   .cart {
     display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
-  }
-  
-  .cart img {
+}
+
+.cart img {
     width: 270px;
     height: 300px;
     object-fit: cover;
     margin-right: 1rem;
     border-radius: 0.8rem;
-  }
-  
+}
+
   .cart div {
-    /* flex: 1; */
-    font-size: 1.3rem;
-    display: flex;
+      /* flex: 1; */
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
     gap: 0.3rem;
     align-items: center;
     justify-content: center;
   }
-  
-  .cart div button {
+  .cart div .btn {
+    display: block;
+    gap: 1rem;
+  }
+  .cart div .btn button {
     padding: 0.2rem 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid black;
     font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .cart div button:hover {
+    background-color: black;
+    color: white;
   }
   
   .total {

@@ -15,6 +15,9 @@ import {
   signInWithEmailAndPassword,
   sendEmailVerification,
 } from "firebase/auth";
+import OrderStatus from "./components/OrderStatus/OrderStatus";
+import Contact from "./Contact/Contact";
+import Menu from "./components/Menu/Menu";
 function App() {
   const navigate = useNavigate();
   const login = (email, password) => {
@@ -62,6 +65,9 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+            <Route path="/orderStatus" element={<ProtectedRoute><OrderStatus/></ProtectedRoute>} />
+            <Route path="/contact" element={<ProtectedRoute><Contact/></ProtectedRoute>} />
+            <Route path="/menu" element={<ProtectedRoute><Menu /></ProtectedRoute>} />
             
             {/* <Route path="/" element={<ProtectedRoute><Signup /></ProtectedRoute>} />
             <Route path="/signup" element={<ProtectedRoute><Signup /></ProtectedRoute>} />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./Cart.module.css";
 import Navbar from "../Navbar/Navbar";
+import LocationPicker from "../Location/LocationPicker";
 
 function Cart() {
   const [cartItems, setCartItems] = useState(() => {
@@ -51,27 +52,32 @@ function Cart() {
   return (
     <>
       <Navbar />
+      <LocationPicker />
       <div className={style.carts}>
         <h2>Cart</h2>
         {cartItems.length === 0 ? (
           <p>Your cart is empty.</p>
         ) : (
           <>
-            {cartItems.map((item) => (
-              <div key={item.id} className={style.cart}>
-                <img src={item.image} alt="" />
-                <div>
-                  <p>{item.name}</p>
-                  <p>{item.price}</p>
-                  <button onClick={() => handleDecrement(item)}>-</button>
-                  <span>{item.quantity || 1}</span>
-                  <button onClick={() => handleIncrement(item)}>+</button>
-                  <button onClick={() => handleRemove(item)}>Remove</button>
+            <div className={style.cartItem}>
+              {cartItems.map((item) => (
+                <div key={item.id} className={style.cart}>
+                  <img src={item.image} alt="" />
+                  <div>
+                    <p>{item.name}</p>
+                    <p>{item.price}</p>
+                    <div className={style.btn}>
+                      <button onClick={() => handleDecrement(item)}>-</button>
+                      <span>{item.quantity || 1}</span>
+                      <button onClick={() => handleIncrement(item)}>+</button>
+                      <button onClick={() => handleRemove(item)}>Remove</button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </>
-          )}
+        )}
         <div className={style.total}>
           <p>Total: ${totalPrice.toFixed(2)}</p>
           <button onClick={handleProceedToPay}>Proceed to Pay</button>

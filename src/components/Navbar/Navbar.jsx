@@ -24,7 +24,7 @@ function Navbar() {
             <div className={`${style.right} ${isOpen ? style.active : ''}`}>
                 <ul>
                     <li><Link to={"/dashboard"}>Home</Link></li>
-                    <li><Link to={"/about"}>About</Link></li>
+                    {/* <li><Link to={"/about"}>About</Link></li> */}
                     <li><Link to={"/cart"}>Cart</Link></li>
                     <li><Link to={"/orderstatus"}>OrderStatus</Link></li>
                     <li><Link to={"/contact"}>Contact</Link></li>
