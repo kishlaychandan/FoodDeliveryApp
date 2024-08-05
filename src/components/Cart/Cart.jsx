@@ -3,6 +3,7 @@ import { useCart } from '../../CartContext'; // Adjust according to your cart co
 import style from './Cart.module.css';
 import Navbar from '../Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
+import FloatingForm from '../FloatingForm/FloatingForm';
 
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
@@ -37,6 +38,7 @@ function Cart() {
   return (
     <>
       <Navbar />
+      <FloatingForm />
       <div className={style.carts}>
         <h2>Cart</h2>
         {cartItems.length === 0 ? (

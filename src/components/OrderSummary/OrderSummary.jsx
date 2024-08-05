@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import style from "./OrderSummary.module.css";
 import Navbar from "../Navbar/Navbar";
 import { useCart } from "../../CartContext"; // Import the context
+import FloatingForm from "../FloatingForm/FloatingForm";
 
 function OrderSummary() {
   const { cartItems, clearCart } = useCart(); // Use the context
@@ -122,6 +123,7 @@ function OrderSummary() {
   return (
     <>
       <Navbar />
+      <FloatingForm />
       <div className={style.orderSummary}>
         <h2>Order Summary</h2>
         <div className={style.orderDetails}>

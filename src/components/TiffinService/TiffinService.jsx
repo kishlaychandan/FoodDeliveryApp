@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './TiffinService.module.css';
 import Navbar from '../Navbar/Navbar';
+import FloatingForm from '../FloatingForm/FloatingForm';
 
 const TiffinService = () => {
   const [selectedOptions, setSelectedOptions] = useState({
@@ -128,6 +129,7 @@ const TiffinService = () => {
   return (
     <>
     <Navbar />
+    <FloatingForm />
     <div className={style.tiffinService}>
       <h2>Customize Your Tiffin Service</h2>
       {Object.keys(prices).map((category) => (
