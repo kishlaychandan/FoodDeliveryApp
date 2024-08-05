@@ -81,6 +81,7 @@
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    color: brown;
   }
   
   .pagination button {
@@ -89,6 +90,7 @@
     padding: 0.5rem 1rem;
     margin: 0 0.2rem;
     cursor: pointer;
+    color: brown;
   }
   
   .pagination button:hover {
@@ -97,7 +99,7 @@
   
   .pagination button.active {
     background-color: #007bff;
-    color: white;
+    color: blue;
   }
   
   .pagination button:disabled {

@@ -1,4 +1,3 @@
-// MenuCard.jsx
 import React, { useState, useEffect } from "react";
 import style from "./MenuCard.module.css";
 import { FcRating } from "react-icons/fc";
@@ -6,7 +5,7 @@ import { useCart } from "../../../CartContext"; // Named import
 
 function MenuCard({ filteredData }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const { cartItems, addToCart } = useCart(); // Use useCart
+  const { cartItems, addToCart, removeFromCart } = useCart(); // Use useCart with removeFromCart
 
   const itemsPerPage = 6;
 
@@ -44,7 +43,14 @@ function MenuCard({ filteredData }) {
   };
 
   const handleAddToCart = (item) => {
-    addToCart(item); // Use addToCart from context
+    const itemInCart = cartItems.find(cartItem => cartItem.id === item.id);
+    if (itemInCart) {
+      // If the item is already in the cart, remove it
+      removeFromCart(item.id);
+    } else {
+      // If the item is not in the cart, add it
+      addToCart(item);
+    }
   };
 
   return (
@@ -52,13 +58,16 @@ function MenuCard({ filteredData }) {
       <div className={style.menuCards}>
         {currentItems.map((item) => (
           <div className={style.menuCard} key={item.id}>
-            <img src={item.image} alt="" />
+            <img src={item.image} alt={item.name} />
             <p>{item.name}</p>
             <p>{item.price}</p>
             <p>{item.category}</p>
             <p className={style.rating}>{item.rating} <FcRating /></p>
             <div className={style.btn}>
-              <button className={style.btn01} onClick={() => handleAddToCart(item)}>
+              <button
+                className={style.btn01}
+                onClick={() => handleAddToCart(item)}
+              >
                 {cartItems.find(cartItem => cartItem.id === item.id) ? 'Remove from Cart' : 'Add to Cart'}
               </button>
             </div>
