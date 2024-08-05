@@ -1,4 +1,4 @@
-/* Style for the floating contact container */
+
 .contactContainer {
     position: fixed;
     right: -300px;
@@ -10,21 +10,18 @@
     transition: right 0.5s ease;
 }
 
-/* Style for the contact button */
 .contactButton {
     background-color: #000;
     color: #fff;
-    padding: 10px;
+    padding: 11px;
     border-radius: 15px 0 0 15px;
     cursor: pointer;
     word-spacing: 2px;
     writing-mode: vertical-rl;
-    /*text-orientation: mixed;*/
     transition: right 0.3s ease;
     z-index: 1001;
 }
 
-/* Style for the contact form */
 .contactFormContainer {
     position: relative;
     background-color: gray;
@@ -33,7 +30,6 @@
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* padding: 0px 15px; */
     padding: 1.5rem 0.8rem;
     transition: right 0.3s ease;
 }
@@ -42,7 +38,6 @@
     width: 100% !important;
 }
 
-/* Show the form and move button when hovering over the container */
 .contactContainer:hover {
     right: 0;
     cursor: pointer;
@@ -59,12 +54,11 @@
     font-weight: bold;
 }
 
-/* Style for the contact form elements */
 .contactFormContainer input,
 .contactFormContainer textarea,
 .contactFormContainer button {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 98%;
+    margin-bottom: 8px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
