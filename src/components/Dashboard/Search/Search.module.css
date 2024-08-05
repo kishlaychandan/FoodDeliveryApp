@@ -82,7 +82,7 @@ button:hover {
 
     .searchInput, .select {
         width: 90%; /* Full width on smaller screens */
-        min-width: 25rem;
+        min-width: 18rem;
         margin-bottom: 1rem; /* Space between elements */
     }
 }
