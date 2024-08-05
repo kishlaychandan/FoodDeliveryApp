@@ -22,6 +22,7 @@
     gap: 6rem;
     align-items: center;
     flex-direction: row;
+    z-index: 3;
 }
 
 .navbar .right ul {
