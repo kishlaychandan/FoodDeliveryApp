@@ -5,7 +5,7 @@
     justify-content: center;
     width: 100%;
     /* max-width: 900px; */
-    margin: 2rem auto; /* Centered with margin */
+    /* margin: 2rem auto;  */
     padding: 1.5rem 2rem; /* Increased padding */
     background: linear-gradient(135deg, #f0f4f8, #e1e9f0); /* Subtle gradient background */
     border-radius: 12px; /* Rounded corners */
