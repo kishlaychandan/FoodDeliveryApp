@@ -7,11 +7,10 @@ function Signup() {
   // sing up
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { singnup } = useContext(AuthContext);
-
-  const create = (e) => {
+  const { signup } = useContext(AuthContext);
+  function create(e) {
     e.preventDefault();
-    singnup(email, password);
+    signup(email, password);
   };
 
   return (

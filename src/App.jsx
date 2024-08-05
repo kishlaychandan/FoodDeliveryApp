@@ -21,7 +21,7 @@ import TiffinService from "./components/TiffinService/TiffinService";
 import TiffinServiceSummaryAndPayment from "./components/TiffinServiceSummaryAndPayment/TiffinServiceSummaryAndPayment";
 
 function App() {
-  const navigate = useNavigate(); // This should be inside the functional component
+  const navigate = useNavigate();
 
   const login = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
