@@ -26,23 +26,25 @@ function Navbar() {
       </div>
       <div className={`${style.right} ${isOpen ? style.active : ""}`}>
         <ul>
+          
+          <li>
+            <Link to={"/dashboard"}>FOODS</Link>
+          </li>
           <li>
             <Link to="/tiffin" className="tiffin-service-link">
-              Tiffin Service Available
+              TIFFIN SERVICE
             </Link>
           </li>
           <li>
-            <Link to={"/dashboard"}>Foods</Link>
-          </li>
-          {/* <li><Link to={"/about"}>About</Link></li> */}
-          <li>
-            <Link to={"/cart"}>Cart</Link>
+            <Link to={"/cart"}>CART</Link>
           </li>
           <li>
-            <Link to={"/orderstatus"}>OrderStatus</Link>
+            <Link to={"/orderstatus"}>ORDER STATUS</Link>
           </li>
+          <li><Link to={"/faq"}>FAQ</Link></li>
+          
           <li>
-            <Link to={"/contact"}>Contact</Link>
+            <Link to={"/contact"}>CONTACT</Link>
           </li>
         </ul>
         <button onClick={logout}>Logout</button>

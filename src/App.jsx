@@ -9,8 +9,9 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Cart from './components/Cart/Cart';
 import OrderSummary from "./components/OrderSummary/OrderSummary";
 import OrderStatus from "./components/OrderStatus/OrderStatus";
-import Contact from "./Contact/Contact";
+import Contact from "./components/Contact/Contact";
 import Menu from "./components/Menu/Menu";
+import Faq from "./components/Faq/Faq";
 import data from "./components/data";
 import ProtectedRoute from "./protectedRoute";
 import AuthContext from "./AuthContext";
@@ -67,8 +68,9 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
-            <Route path="/order-summary" element={<ProtectedRoute><OrderSummary /></ProtectedRoute>} />
             <Route path="/orderStatus" element={<ProtectedRoute><OrderStatus /></ProtectedRoute>} />
+            <Route path="/order-summary" element={<ProtectedRoute><OrderSummary /></ProtectedRoute>} />
+            <Route path="/faq" element={<ProtectedRoute><Faq /></ProtectedRoute>} />
             <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
             <Route path="/menu" element={<ProtectedRoute><Menu data={data} /></ProtectedRoute>} />
             <Route path="/tiffin" element={<ProtectedRoute><TiffinService/></ProtectedRoute>} />

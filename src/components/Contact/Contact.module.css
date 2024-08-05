@@ -1,0 +1,160 @@
+/* Contact.module.css */
+.contactContainer {
+    display: flex;
+    width: 100%;
+    /* background-image: url("https://t4.ftcdn.net/jpg/07/26/62/25/240_F_726622527_rJl0PX7g6u7Q2LvXgNTr24vFUIpehyfO.jpg"); */
+    /* background-image: url(https://t4.ftcdn.net/jpg/07/18/81/45/240_F_718814555_HXgdstEveOjBi4HcLylaUjPus6rWiMKA.jpg); */
+    /* background-image: url(https://t4.ftcdn.net/jpg/04/41/95/71/240_F_441957146_d9m0ICsU0yKm0ANghDm0toNyHBBtWEVT.jpg); */
+    /* background-image: url(https://t3.ftcdn.net/jpg/02/64/00/56/240_F_264005624_NyFEBO7k0OsNMQiI343zBZZ7WH89f6Ls.jpg); */
+
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    /* height: 100vh; */
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding: 2rem; */
+    /* max-width: 800px; */
+    /* background: #f9f9f9; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  .contactContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .contactContainer  h1 {
+    font-size: 2.5rem;
+    /* margin-bottom: 1rem; */
+    color: #c8c1c1;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5rem;
+  }
+  
+  .contactContainer .contactForm {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid gray;
+    padding: 3rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    color: rgb(173, 169, 169);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.8);
+  }
+  
+  .contactContainer  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contactContainer  .label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .contactContainer  .formControl {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contactContainer  .formControl:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .contactContainer  .textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+.contactContainer  .error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+  }
+  
+ .contactContainer .successMessage {
+    color: #27ae60;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+.contactContainer  .loadingMessage {
+    color: #f39c12;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+.contactContainer  .submitButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center;
+  }
+  
+.contactContainer  .submitButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+.contactContainer  .submitButton:active {
+    background-color: #003d7a;
+  }
+  
+  @media (max-width: 768px) {
+   .contactContainer .contactContainer {
+      padding: 1.5rem;
+    }
+  
+   .contactContainer .contactForm {
+      max-width: 85%;
+    }
+  
+    .submitButton {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+   .contactContainer .contactContainer {
+      padding: 1rem;
+    }
+  
+   .contactContainer h1 {
+      font-size: 2rem;
+    }
+  
+   .contactContainer .formControl {
+      font-size: 0.875rem;
+    }
+  
+   .contactContainer .submitButton {
+      font-size: 0.875rem;
+    }
+  }
+  
