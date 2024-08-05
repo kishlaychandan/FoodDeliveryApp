@@ -74,7 +74,7 @@ function OrderStatus() {
                           <strong>{category.charAt(0).toUpperCase() + category.slice(1)}:</strong>
                           <ul>
                             {items.map((item, index) => (
-                              <li key={index}>{item.option} - ₹{item.price}</li>
+                              <li key={index}>{item.option} </li>
                             ))}
                           </ul>
                         </li>

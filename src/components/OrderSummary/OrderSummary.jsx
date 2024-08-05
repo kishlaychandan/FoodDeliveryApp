@@ -30,7 +30,6 @@ function OrderSummary() {
             0
           ),
         };
-        console.log('Order Data:', orderData);
         setOrder(orderData);
       } else {
         // If no order data found, navigate back to home or error page
@@ -51,8 +50,6 @@ function OrderSummary() {
         0
       )
     : order.totalPrice;
-
-  console.log('Total Price:', totalPrice);
 
   const totalWithCharges = totalPrice + deliveryCharge + (totalPrice * gst / 100);
 
@@ -94,6 +91,9 @@ function OrderSummary() {
       ...order,
       orderId: response.razorpay_payment_id,
       date: new Date().toLocaleDateString(),
+      deliveryCharge,
+      gst,
+      totalWithCharges
     };
 
     const existingOrders = localStorage.getItem("orders");
