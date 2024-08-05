@@ -39,9 +39,6 @@ function Search({ data, setFilteredData }) {
 
         if (sortOption) {
             switch (sortOption) {
-                case 'relevance':
-                    // Assuming relevance is the default sorting
-                    break;
                 case 'priceLowToHigh':
                     filtered = filtered.slice().sort((a, b) => a.price - b.price);
                     break;
@@ -64,29 +61,36 @@ function Search({ data, setFilteredData }) {
 
     return (
         <div className={style.searchContainer}>
-            <input
-                type="text"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={handleSearch}
-                className={style.searchInput}
-            />
-            <select value={category} onChange={handleCategoryChange} className={style.select}>
-                <option value="">All Categories</option>
-                <option value="Mexican">Mexican</option>
-                <option value="North Indian">North Indian</option>
-                <option value="South Indian">South Indian</option>
-                <option value="Desserts">Desserts</option>
-                <option value="Italian">Italian</option>
-                <option value="Drinks">Drinks</option>
-            </select>
-            <select value={sortOption} onChange={handleSortChange} className={style.select}>
-                <option value="relevance">Most Relevant</option>
-                <option value="priceLowToHigh">Price: Low to High</option>
-                <option value="priceHighToLow">Price: High to Low</option>
-                <option value="ratingLowToHigh">Rating: Low to High</option>
-                <option value="ratingHighToLow">Rating: High to Low</option>
-            </select>
+            <div className={style.inputWrapper}>
+                <input
+                    type="text"
+                    placeholder="Search by name..."
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    className={style.searchInput}
+                    aria-label="Search"
+                />
+            </div>
+            <div className={style.selectWrapper}>
+                <select value={category} onChange={handleCategoryChange} className={style.select} aria-label="Select category">
+                    <option value="">All Categories</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="North Indian">North Indian</option>
+                    <option value="South Indian">South Indian</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+            </div>
+            <div className={style.selectWrapper}>
+                <select value={sortOption} onChange={handleSortChange} className={style.select} aria-label="Sort options">
+                    <option value="relevance">Most Relevant</option>
+                    <option value="priceLowToHigh">Price: Low to High</option>
+                    <option value="priceHighToLow">Price: High to Low</option>
+                    <option value="ratingLowToHigh">Rating: Low to High</option>
+                    <option value="ratingHighToLow">Rating: High to Low</option>
+                </select>
+            </div>
         </div>
     );
 }

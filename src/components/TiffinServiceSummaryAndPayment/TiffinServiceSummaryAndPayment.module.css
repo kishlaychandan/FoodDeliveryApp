@@ -1,0 +1,38 @@
+.summaryAndPaymentContainer {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .summaryDetails, .paymentDetails {
+    margin-bottom: 20px;
+  }
+  
+  .categorySection {
+    margin-bottom: 15px;
+  }
+  
+  .addressInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .paymentButton {
+    padding: 10px 20px;
+    background-color: #3399cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .paymentButton:hover {
+    background-color: #287b99;
+  }
+  

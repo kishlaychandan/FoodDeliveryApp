@@ -1,25 +1,18 @@
+// MenuCard.jsx
 import React, { useState, useEffect } from "react";
 import style from "./MenuCard.module.css";
 import { FcRating } from "react-icons/fc";
+import { useCart } from "../../../CartContext"; // Named import
+
 function MenuCard({ filteredData }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [cartItems, setCartItems] = useState(() => {
-    // Retrieve cart items from localStorage on initial load
-    const savedCart = localStorage.getItem('cartItems');
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
+  const { cartItems, addToCart } = useCart(); // Use useCart
 
   const itemsPerPage = 6;
 
   useEffect(() => {
-    // Reset to page 1 whenever filteredData changes
     setCurrentPage(1);
   }, [filteredData]);
-
-  useEffect(() => {
-    // Save cart items to localStorage whenever they change
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -51,16 +44,7 @@ function MenuCard({ filteredData }) {
   };
 
   const handleAddToCart = (item) => {
-    setCartItems((prevCart) => {
-      const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
-      if (existingItem) {
-        // Remove item from cart if it already exists
-        return prevCart.filter(cartItem => cartItem.id !== item.id);
-      } else {
-        // Add item to cart
-        return [...prevCart, item];
-      }
-    });
+    addToCart(item); // Use addToCart from context
   };
 
   return (
@@ -74,9 +58,9 @@ function MenuCard({ filteredData }) {
             <p>{item.category}</p>
             <p className={style.rating}>{item.rating} <FcRating /></p>
             <div className={style.btn}>
-            <button className={style.btn01} onClick={() => handleAddToCart(item)}>
-              {cartItems.find(cartItem => cartItem.id === item.id) ? 'Remove from Cart' : 'Add to Cart'}
-            </button>
+              <button className={style.btn01} onClick={() => handleAddToCart(item)}>
+                {cartItems.find(cartItem => cartItem.id === item.id) ? 'Remove from Cart' : 'Add to Cart'}
+              </button>
             </div>
           </div>
         ))}

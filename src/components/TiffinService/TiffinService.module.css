@@ -1,0 +1,36 @@
+.tiffinService {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .categoryContainer {
+    margin-bottom: 20px;
+  }
+  
+  .selected {
+    background-color: #3399cc;
+    color: white;
+  }
+  
+  .totalPrice {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .proceedButton {
+    padding: 10px 20px;
+    background-color: #3399cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .proceedButton:hover {
+    background-color: #287b99;
+  }
+  

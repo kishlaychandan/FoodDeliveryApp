@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import style from './Menu.module.css'
-import data from '../data'
-function Menu() {
+// import data from '../data'
+function Menu({data}) {
   return (
     <>
     <Navbar/>

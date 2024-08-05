@@ -5,9 +5,11 @@
     /* background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/076/168/small/food-delivery-banner-design-flat-design-online-order-vector.jpg"); */
     /* background-image: url("https://us.123rf.com/450wm/nataliamir/nataliamir2002/nataliamir200200053/140875669-banner-colourful-herbs-and-spices-and-dry-vegetable-for-cooking-in-wooden-spoons-and-bowls-on-dark.jpg"); */
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/032/028/929/small/spices-and-herbs-with-measuring-spoons-photo.jpg");
-    background-repeat: no-repeat;
+    /* background-image: url("https://images.stockcake.com/public/3/a/d/3ad0b289-2694-44d6-87d7-d62437d5d9b9_large/dinner-menu-browsing-stockcake.jpg"); */
+    
+    /* background-repeat: no-repeat; */
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     position: relative;
 }
 .menuLink{

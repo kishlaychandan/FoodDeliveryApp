@@ -28,31 +28,69 @@ function OrderStatus() {
       <Navbar />
       <div className={style.orderStatus}>
         <h2>Order Status</h2>
-        {orders.length === 0 ? (
-          <p>No orders found.</p>
+
+        {/* Food Orders */}
+        {orders.filter(order => order.type !== 'Tiffin Service').length === 0 ? (
+          <p>No food orders found.</p>
         ) : (
-          <div>
-            {orders.map((order) => (
+          <>
+            <h3>Food Orders</h3>
+            {orders.filter(order => order.type !== 'Tiffin Service').map((order) => (
               <div key={order.orderId} className={style.orderItem}>
                 <div className={style.orderDetails}>
                   <h3>Order ID: {order.orderId}</h3>
                   <p>Date: {order.date}</p>
                   <p>Address: {order.address}</p>
-                  <p>
-                    Total Price: ₹
-                    {order.totalPrice ? order.totalPrice.toFixed(2) : "N/A"}
-                  </p>
+                  <p>Total Price: ₹{order.totalPrice ? order.totalPrice.toFixed(2) : "N/A"}</p>
                 </div>
                 <button onClick={() => handleDeleteOrder(order.orderId)}>
                   Delete Order
                 </button>
               </div>
             ))}
-            <button onClick={handleClearAll} className={style.clearAll}>
-              Clear All Orders
-            </button>
-          </div>
+          </>
         )}
+
+        {/* Tiffin Service Orders */}
+        {orders.filter(order => order.type === 'Tiffin Service').length === 0 ? (
+          <p>No tiffin service orders found.</p>
+        ) : (
+          <>
+            <h3>Tiffin Service Orders</h3>
+            {orders.filter(order => order.type === 'Tiffin Service').map((order) => (
+              <div key={order.orderId} className={style.orderItem}>
+                <div className={style.orderDetails}>
+                  <h3>Order ID: {order.orderId}</h3>
+                  <p>Date: {order.date}</p>
+                  <p>Duration: {order.duration}</p>
+                  <p>Total Price: ₹{order.totalPrice ? order.totalPrice.toFixed(2) : "N/A"}</p>
+                  <h4>Selected Items:</h4>
+                  <ul>
+                    {Object.entries(order.options).map(([category, items]) => (
+                      items.length > 0 && (
+                        <li key={category}>
+                          <strong>{category.charAt(0).toUpperCase() + category.slice(1)}:</strong>
+                          <ul>
+                            {items.map((item, index) => (
+                              <li key={index}>{item.option} - ₹{item.price}</li>
+                            ))}
+                          </ul>
+                        </li>
+                      )
+                    ))}
+                  </ul>
+                </div>
+                <button onClick={() => handleDeleteOrder(order.orderId)}>
+                  Delete Order
+                </button>
+              </div>
+            ))}
+          </>
+        )}
+
+        <button onClick={handleClearAll} className={style.clearAll}>
+          Clear All Orders
+        </button>
       </div>
     </>
   );

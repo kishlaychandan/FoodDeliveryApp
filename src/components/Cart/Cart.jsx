@@ -1,49 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import style from "./Cart.module.css";
-import Navbar from "../Navbar/Navbar";
+// Cart.jsx
+import React from 'react';
+import { useCart } from '../../CartContext'; // Adjust according to your cart context implementation
+import style from './Cart.module.css';
+import Navbar from '../Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
-  const [cartItems, setCartItems] = useState(() => {
-    const savedCart = localStorage.getItem("cartItems");
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
+  const { cartItems, removeFromCart, updateQuantity } = useCart();
   const navigate = useNavigate();
 
+  const handleProceedToOrder = () => {
+    if (cartItems.length === 0) return alert('Cart is empty');
+    navigate('/order-summary');
+  };
+
   const handleIncrement = (item) => {
-    setCartItems((prevCart) =>
-      prevCart.map((cartItem) =>
-        cartItem.id === item.id
-          ? { ...cartItem, quantity: (cartItem.quantity || 1) + 1 }
-          : cartItem
-      )
-    );
+    updateQuantity(item.id, (item.quantity || 1) + 1);
   };
 
   const handleDecrement = (item) => {
-    setCartItems((prevCart) =>
-      prevCart.map((cartItem) =>
-        cartItem.id === item.id && cartItem.quantity > 1
-          ? { ...cartItem, quantity: cartItem.quantity - 1 }
-          : cartItem
-      )
-    );
+    if (item.quantity > 1) {
+      updateQuantity(item.id, item.quantity - 1);
+    } else {
+      removeFromCart(item.id);
+    }
   };
-
-  const handleRemove = (item) => {
-    setCartItems((prevCart) =>
-      prevCart.filter((cartItem) => cartItem.id !== item.id)
-    );
-  };
-
-  const handleProceedToOrder = () => {
-    {if(cartItems.length===0) return alert("Cart is empty")}
-    navigate("/order-summary");
-  };
-
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
 
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * (item.quantity || 1),
@@ -65,23 +46,23 @@ function Cart() {
                   <img src={item.image} alt="" />
                   <div>
                     <p>{item.name}</p>
-                    <p>{item.price}</p>
+                    <p>Rs.{item.price}</p>
                     <div className={style.btn}>
                       <button onClick={() => handleDecrement(item)}>-</button>
                       <span>{item.quantity || 1}</span>
                       <button onClick={() => handleIncrement(item)}>+</button>
-                      <button onClick={() => handleRemove(item)}>Remove</button>
+                      <button onClick={() => removeFromCart(item.id)}>Remove</button>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+            <div className={style.total}>
+              <p>Total: ₹{totalPrice.toFixed(2)}</p>
+              <button onClick={handleProceedToOrder}>Proceed to Order</button>
+            </div>
           </>
         )}
-        <div className={style.total}>
-          <p>Total: ${totalPrice.toFixed(2)}</p>
-          <button onClick={handleProceedToOrder}>Proceed to Order</button>
-        </div>
       </div>
     </>
   );
