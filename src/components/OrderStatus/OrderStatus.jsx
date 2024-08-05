@@ -43,7 +43,7 @@ function OrderStatus() {
                   <h3>Order ID: {order.orderId}</h3>
                   <p>Date: {order.date}</p>
                   <p>Address: {order.address}</p>
-                  <p>Total Price: ₹{order.totalPrice ? order.totalPrice.toFixed(2) : "N/A"}</p>
+                  <p>Total Price: ₹{order.totalWithCharges ? order.totalWithCharges.toFixed(2) : "N/A"}</p>
                 </div>
                 <button onClick={() => handleDeleteOrder(order.orderId)}>
                   Delete Order
