@@ -21,14 +21,16 @@ function OrderSummary() {
     } else {
       // If it's a cart order
       if (cartItems.length > 0) {
-        setOrder({
+        const orderData = {
           cartItems,
           address,
           totalPrice: cartItems.reduce(
             (acc, item) => acc + item.price * (item.quantity || 1),
             0
           ),
-        });
+        };
+        console.log('Order Data:', orderData);
+        setOrder(orderData);
       } else {
         // If no order data found, navigate back to home or error page
         navigate("/");
@@ -48,6 +50,8 @@ function OrderSummary() {
         0
       )
     : order.totalPrice;
+
+  console.log('Total Price:', totalPrice);
 
   const totalWithCharges = totalPrice + deliveryCharge + (totalPrice * gst / 100);
 

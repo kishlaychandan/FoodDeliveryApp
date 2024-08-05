@@ -1,4 +1,3 @@
-// Cart.jsx
 import React from 'react';
 import { useCart } from '../../CartContext'; // Adjust according to your cart context implementation
 import style from './Cart.module.css';
@@ -26,10 +25,14 @@ function Cart() {
     }
   };
 
-  const totalPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * (item.quantity || 1),
-    0
-  );
+  // Add console logs to debug
+  const totalPrice = cartItems.reduce((acc, item) => {
+    const itemTotal = item.price * (item.quantity || 1);
+    console.log(`Item: ${item.name}, Price: ${item.price}, Quantity: ${item.quantity}, Item Total: ${itemTotal}`);
+    return acc + itemTotal;
+  }, 0);
+
+  console.log('Total Price:', totalPrice);
 
   return (
     <>
