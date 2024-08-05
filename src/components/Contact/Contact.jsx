@@ -37,7 +37,7 @@ const Contact = () => {
     e.preventDefault();
     if (validateForm()) {
       setLoading(true);
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
+      emailjs.send('service_pgmg1eq', 'template_omf4iyo', formData, 'Mx0ztLcbtCPg3GFi2')
         .then(() => {
           setSubmitted(true);
           setFormData({ name: '', email: '', message: '' });
