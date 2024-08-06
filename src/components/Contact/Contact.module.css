@@ -1,5 +1,10 @@
-/* Contact.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kalnia+Glaze:wght@100..700&family=Lilita+One&family=Monoton&family=Rubik+Bubbles&family=Rubik+Scribble&family=Sedan:ital@0;1&display=swap');
+
+.contactContainer h1{
+  font-family: "Rubik Scribble", system-ui;   
+}
 .contactContainer {
+  font-family:cursive;
     display: flex;
     width: 100%;
     /* background-image: url("https://t4.ftcdn.net/jpg/07/26/62/25/240_F_726622527_rJl0PX7g6u7Q2LvXgNTr24vFUIpehyfO.jpg"); */
@@ -22,6 +27,7 @@
     border-radius: 10px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   }
+  
   .contactContainer img{
     position: absolute;
     top: 0;
