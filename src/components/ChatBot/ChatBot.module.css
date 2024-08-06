@@ -29,3 +29,9 @@
     width: 100%;
   }
   
+  @media screen and (max-width: 768px) {
+    .chatbotIcon .icon{
+      margin: 0;
+    }
+    
+  }
