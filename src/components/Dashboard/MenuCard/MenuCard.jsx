@@ -59,9 +59,9 @@ function MenuCard({ filteredData }) {
         {currentItems.map((item) => (
           <div className={style.menuCard} key={item.id}>
             <img src={item.image} alt={item.name} />
-            <p>{item.name}</p>
-            <p>{item.price}</p>
-            <p>{item.category}</p>
+            <p className={style.name}>{item.name}</p>
+            <p className={style.price}>Rs.{item.price}</p>
+            <p className={style.category}>{item.category}</p>
             <p className={style.rating}>{item.rating} <FcRating /></p>
             <div className={style.btn}>
               <button

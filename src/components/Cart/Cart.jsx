@@ -4,7 +4,7 @@ import style from './Cart.module.css';
 import Navbar from '../Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
 import FloatingForm from '../FloatingForm/FloatingForm';
-
+import ChatBots from '../ChatBot/ChatBots';
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
   const navigate = useNavigate();
@@ -39,6 +39,7 @@ function Cart() {
     <>
       <Navbar />
       <FloatingForm />
+      <ChatBots />
       <div className={style.carts}>
         <h2>Cart</h2>
         {cartItems.length === 0 ? (

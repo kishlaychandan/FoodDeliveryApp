@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from "./Home.module.css";
 import anime from "animejs";
-
+import ChatBots from "../ChatBot/ChatBots";
 function Home() {
   useEffect(() => {
     const createParticles = () => {
@@ -52,6 +52,7 @@ function Home() {
 
   return (
     <>
+      {/* <ChatBots /> */}
       <div className={style.hnav}>
         <div className={style.left}>
           <Link to="/">LOGO</Link>
