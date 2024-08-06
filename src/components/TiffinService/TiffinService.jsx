@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import style from './TiffinService.module.css';
 import Navbar from '../Navbar/Navbar';
 import FloatingForm from '../FloatingForm/FloatingForm';
+import ChatBots from '../ChatBot/ChatBots';
 
 const TiffinService = () => {
   const [selectedOptions, setSelectedOptions] = useState({
@@ -130,6 +131,7 @@ const TiffinService = () => {
     <>
     <Navbar />
     <FloatingForm />
+    <ChatBots />
     <div className={style.tiffinService}>
       <h2>Customize Your Tiffin Service</h2>
       {Object.keys(prices).map((category) => (

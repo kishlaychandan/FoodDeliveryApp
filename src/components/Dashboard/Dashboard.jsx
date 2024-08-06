@@ -7,6 +7,7 @@ import Banner from './Banner/Banner';
 import MenuCard from './MenuCard/MenuCard';
 import Search from './Search/Search';
 import FloatingForm from '../FloatingForm/FloatingForm';
+import ChatBots from '../ChatBot/ChatBots';
 function Dashboard() {
   const { logout } = useContext(AuthContext);
   const [filteredData, setFilteredData] = useState(data);
@@ -15,6 +16,7 @@ function Dashboard() {
     <>
       <div className={style.dashboard}>
         <FloatingForm />
+        <ChatBots />
         <Navbar />
         <Banner />
         <Search data={data} setFilteredData={setFilteredData} />

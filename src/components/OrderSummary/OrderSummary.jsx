@@ -4,7 +4,7 @@ import style from "./OrderSummary.module.css";
 import Navbar from "../Navbar/Navbar";
 import { useCart } from "../../CartContext"; // Import the context
 import FloatingForm from "../FloatingForm/FloatingForm";
-
+import ChatBots from '../ChatBot/ChatBots';
 function OrderSummary() {
   const { cartItems, clearCart } = useCart(); // Use the context
   const [address, setAddress] = useState("");
@@ -124,6 +124,7 @@ function OrderSummary() {
     <>
       <Navbar />
       <FloatingForm />
+      <ChatBots />
       <div className={style.orderSummary}>
         <h2>Order Summary</h2>
         <div className={style.orderDetails}>

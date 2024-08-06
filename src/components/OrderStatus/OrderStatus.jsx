@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "./OrderStatus.module.css";
 import Navbar from "../Navbar/Navbar";
 import FloatingForm from "../FloatingForm/FloatingForm";
-
+import ChatBots from '../ChatBot/ChatBots';
 function OrderStatus() {
   const [orders, setOrders] = useState([]);
 
@@ -28,6 +28,7 @@ function OrderStatus() {
     <>
       <Navbar />
       <FloatingForm />
+      <ChatBots />
       <div className={style.orderStatus}>
         <h2>Order Status</h2>
 

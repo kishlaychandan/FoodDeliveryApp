@@ -2,11 +2,13 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import style from './Menu.module.css'
 import FloatingForm from '../FloatingForm/FloatingForm'
+import ChatBots from '../ChatBot/ChatBots';
 // import data from '../data'
 function Menu({data}) {
   return (
     <>
     <Navbar/>
+    <ChatBots/>
     <FloatingForm />
     <div className={style.menu}>
       <h1>Menu</h1>

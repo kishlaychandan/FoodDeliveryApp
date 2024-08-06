@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import style from './TiffinServiceSummaryAndPayment.module.css';
 import Navbar from '../Navbar/Navbar';
 import FloatingForm from '../FloatingForm/FloatingForm';
+import ChatBots from '../ChatBot/ChatBots';
 
 const TiffinServiceSummaryAndPayment = () => {
   const [address, setAddress] = useState('');
@@ -73,6 +74,7 @@ const TiffinServiceSummaryAndPayment = () => {
     <>
     <Navbar />
     <FloatingForm />
+    <ChatBots />
     <div className={style.summaryAndPaymentContainer}>
       <h2>Tiffin Service Summary and Payment</h2>
 
