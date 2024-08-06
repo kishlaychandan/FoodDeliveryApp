@@ -87,10 +87,12 @@
 @media (max-width: 1000px) {
     .navbar {
         /* flex-direction: column; */
-        align-items: flex-start;
-        padding: 1rem 3rem;
+        align-items: center;
+        padding: 1rem ;
     }
-
+    .navbar .logo{
+        margin-left: 0;
+    }
     .navbar .right {
         display: none;
         flex-direction: column;
