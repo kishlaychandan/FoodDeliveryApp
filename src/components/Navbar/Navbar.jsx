@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import style from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import AuthContext from "../../AuthContext";
-
+import bg from '../../assets/kc-removebg-preview.png'
 function Navbar() {
   const { logout } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <div className={style.navbar}>
       <div className={style.left}>
-        <h1>Foodies</h1>
+      <img className={style.logo} src={bg}/>
       </div>
       <div
         className={`${style.hamburger} ${isOpen ? style.open : ""}`}

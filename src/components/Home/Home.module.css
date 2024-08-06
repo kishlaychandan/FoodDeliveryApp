@@ -23,6 +23,9 @@
     padding: 0.8rem 1rem;
     cursor: pointer;
   }
+  .left a img{
+    width: 8rem;
+  }
   
   .right {
     display: flex;

@@ -3,6 +3,7 @@ import style from "./Signin.module.css";
 import AuthContext from '../../AuthContext';
 import { Link } from "react-router-dom";
 import anime from "animejs";
+import bg from '../../assets/kc-removebg-preview.png'
 
 function Signin() {
   const [email, setEmail] = useState("");
@@ -65,7 +66,7 @@ function Signin() {
     <>
       <div className={style.nav}>
         <div className={style.left}>
-          <Link to="/">LOGO</Link>
+          <Link to="/"><img src={bg} alt="" /></Link>
         </div>
         <div className={style.right}>
           <Link to="/signup">SIGNUP</Link>

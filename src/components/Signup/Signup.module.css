@@ -23,7 +23,9 @@
     padding: 0.8rem 1rem;
     cursor: pointer;
 }
-
+.nav .left a img{
+    width: 8rem;
+}
 .nav .right {
     display: flex;
     gap: 2rem;

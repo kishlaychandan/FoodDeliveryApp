@@ -20,7 +20,10 @@
     color: white;
     padding: 1rem;
 }
-
+.navbar .logo{
+    margin-left: 2rem;
+    width: 8rem;
+}
 .navbar .left {
     display: flex;
     align-items: center;

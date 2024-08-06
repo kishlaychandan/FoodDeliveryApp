@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import style from "./Home.module.css";
 import anime from "animejs";
 import ChatBots from "../ChatBot/ChatBots";
+import bg from '../../assets/kc-removebg-preview.png'
 function Home() {
   useEffect(() => {
     const createParticles = () => {
@@ -55,7 +56,7 @@ function Home() {
       {/* <ChatBots /> */}
       <div className={style.hnav}>
         <div className={style.left}>
-          <Link to="/">LOGO</Link>
+          <Link to="/"><img src={bg} alt="" /></Link>
         </div>
         <div className={style.right}>
           <Link to="/signup">SIGNUP</Link>
