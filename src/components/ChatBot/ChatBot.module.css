@@ -1,7 +1,7 @@
 .chatbotContainer {
     position: fixed;
     bottom: 5px;
-    right: 50px;
+    right: 10px;
     z-index: 1000;
     /* width: 300px; */
     transition: right 0.6s ease;
@@ -21,7 +21,7 @@
     cursor: pointer;
     background-color: rgb(89, 26, 205);
     padding: 0.8rem;
-    margin: 0rem 2rem;
+    margin: 0rem 1rem;
     border-radius: 50%;
   }
   
