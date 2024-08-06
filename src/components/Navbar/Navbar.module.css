@@ -11,7 +11,7 @@
     /* font-family: "Rubik Bubbles", system-ui; */
     /* font-family: "Monoton", sans-serif; */
     font-family: "Black Ops One", system-ui;
-    
+    /* height: 5rem; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,9 @@
     cursor: pointer;
     border-radius: 0.8rem;
     font-weight: bold;
+    margin: 0;
     margin-left: 1rem;
+    
 }
 
 .navbar .hamburger {

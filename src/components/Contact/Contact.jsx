@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import style from './Contact.module.css';
 import Navbar from '../Navbar/Navbar';
-
+import ChatBots from '../ChatBot/ChatBots';
+import Footer from '../Footer/Footer';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -98,6 +99,8 @@ const Contact = () => {
         <button type="submit" className={style.submitButton}>Send Message</button>
       </form>
     </div>
+    <ChatBots />
+    <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import style from "./OrderStatus.module.css";
 import Navbar from "../Navbar/Navbar";
 import FloatingForm from "../FloatingForm/FloatingForm";
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from "../Footer/Footer";
 function OrderStatus() {
   const [orders, setOrders] = useState([]);
 
@@ -95,6 +96,7 @@ function OrderStatus() {
           Clear All Orders
         </button>
       </div>
+      <Footer />
     </>
   );
 }

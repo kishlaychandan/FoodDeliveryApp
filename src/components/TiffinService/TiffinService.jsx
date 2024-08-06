@@ -4,6 +4,7 @@ import style from './TiffinService.module.css';
 import Navbar from '../Navbar/Navbar';
 import FloatingForm from '../FloatingForm/FloatingForm';
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from '../Footer/Footer';
 
 const TiffinService = () => {
   const [selectedOptions, setSelectedOptions] = useState({
@@ -161,6 +162,7 @@ const TiffinService = () => {
       <div className={style.totalPrice}>Total Price: ₹{totalPrice}</div>
       <button onClick={handleProceedToSummary} className={style.proceedButton}>Proceed to Summary</button>
     </div>
+    <Footer />
     </>
   );
 };

@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import { useCart } from "../../CartContext"; // Import the context
 import FloatingForm from "../FloatingForm/FloatingForm";
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from "../Footer/Footer";
 function OrderSummary() {
   const { cartItems, clearCart } = useCart(); // Use the context
   const [address, setAddress] = useState("");
@@ -154,6 +155,7 @@ function OrderSummary() {
         </div>
         <button onClick={handlePayment}>Proceed to Pay</button>
       </div>
+      <Footer />
     </>
   );
 }

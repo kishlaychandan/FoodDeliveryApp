@@ -8,6 +8,7 @@ import MenuCard from './MenuCard/MenuCard';
 import Search from './Search/Search';
 import FloatingForm from '../FloatingForm/FloatingForm';
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from '../Footer/Footer';
 function Dashboard() {
   const { logout } = useContext(AuthContext);
   const [filteredData, setFilteredData] = useState(data);
@@ -22,6 +23,7 @@ function Dashboard() {
         <Search data={data} setFilteredData={setFilteredData} />
         <MenuCard filteredData={filteredData} />
       </div>
+      <Footer />
     </>
   );
 }

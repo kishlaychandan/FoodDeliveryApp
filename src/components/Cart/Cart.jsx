@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
 import FloatingForm from '../FloatingForm/FloatingForm';
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from '../Footer/Footer';
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
   const navigate = useNavigate();
@@ -70,6 +71,7 @@ function Cart() {
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 }

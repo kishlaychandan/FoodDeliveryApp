@@ -4,6 +4,7 @@ import style from './TiffinServiceSummaryAndPayment.module.css';
 import Navbar from '../Navbar/Navbar';
 import FloatingForm from '../FloatingForm/FloatingForm';
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from '../Footer/Footer';
 
 const TiffinServiceSummaryAndPayment = () => {
   const [address, setAddress] = useState('');
@@ -107,6 +108,7 @@ const TiffinServiceSummaryAndPayment = () => {
         <button className={style.paymentButton} onClick={handlePayment}>Pay Now</button>
       </div>
     </div>
+    <Footer />
     </>
   );
 };

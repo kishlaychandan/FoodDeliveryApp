@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import style from './Menu.module.css'
 import FloatingForm from '../FloatingForm/FloatingForm'
 import ChatBots from '../ChatBot/ChatBots';
+import Footer from '../Footer/Footer';
 // import data from '../data'
 function Menu({data}) {
   return (
@@ -27,7 +28,7 @@ function Menu({data}) {
         }
       </div>
     </div>
-
+    <Footer/>
     </>
   )
 }
