@@ -70,7 +70,7 @@ function Signin() {
         </div>
         <div className={style.right}>
           <Link to="/signup">SIGNUP</Link>
-          <Link to="/signin">LOGIN</Link>
+          {/* <Link to="/signin">LOGIN</Link> */}
         </div>
       </div>
       <div className={style.formContainer}>

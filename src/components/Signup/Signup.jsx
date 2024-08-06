@@ -68,7 +68,7 @@ function Signup() {
           <Link to="/"><img className={style.logo} src={bg} /></Link>
         </div>
         <div className={style.right}>
-          <Link to="/signup">SIGN UP</Link>
+          {/* <Link to="/signup">SIGN UP</Link> */}
           <Link to="/signin">LOGIN</Link>
         </div>
       </div>
