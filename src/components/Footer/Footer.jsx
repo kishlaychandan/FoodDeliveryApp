@@ -10,7 +10,7 @@ function Footer() {
         <div className={styles.Footer}>
             <div className={styles.Footer1}>
                 <h1>(+91) 9631808818</h1>
-                <p>Bengaluru, Karnataka, India, 560083</p>
+                <p>Bengaluru, Karnataka, India.</p>
             </div>
             <div className={styles.Footer2}>
                 <p>Monday - Thursday: 10AM - 9PM</p>
