@@ -130,7 +130,9 @@ function ChatBots() {
           className={style.chatbotIcon}
           onClick={toggleChatBot}
         >
-          {isOpen ? <FaTimes size="24" /> : <FaRobot size="24" />}
+          <div className={style.icon}>
+            {isOpen ? <FaTimes size="30" /> : <FaRobot size="30" />}
+          </div>
         </div>
         {isOpen && (
           <Segment className={style.chatbotSegment}>
