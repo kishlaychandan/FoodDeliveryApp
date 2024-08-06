@@ -10,6 +10,7 @@
     flex-direction: column;
     gap: 2rem;
     padding: 1.5rem;
+    min-height: 48vh;
   }
   .carts h2{
     text-align: center;
