@@ -1,165 +1,166 @@
 /* Home.module.css */
 .hnav {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
-    color: rgb(59, 57, 57);
-    position: sticky;
-    top: 0;
-    z-index: 2; /* Ensure the navbar is on top */
-    background-image: linear-gradient(to top, white, red);
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-bottom-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-    border: 2px solid rgb(248, 230, 230);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  color: rgb(59, 57, 57);
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Ensure the navbar is on top */
+  background-image: linear-gradient(to top, white, red);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  border: 2px solid rgb(248, 230, 230);
+}
+
+.left a {
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+.left a img{
+  width: 8rem;
+}
+
+.right {
+  display: flex;
+  gap: 2rem;
+}
+
+.right a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: rgb(245, 187, 197);
+}
+
+.right a:hover {
+  background-color: rgb(190, 190, 243, 0.3);
+  text-decoration: dotted underline;
+}
+
+.home {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to bottom, white, red);
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 47%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  z-index: 3;
+}
+
+.img img {
+  width: 100%;
+  max-height: 90vh;
+  border-radius: 0.6rem;
+  z-index: 3;
+}
+
+.Des {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: brown;
+  width: 53%;
+  height: 100%;
+}
+
+.Des h1 {
+  color: rgb(73, 108, 157);
+  font-size: 4rem;
+  margin: 2rem;
+  z-index: 3;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  line-height: 3rem;
+  color: rgb(83, 116, 161);
+  z-index: 3;
+}
+
+.highlights {
+  font-size: 2rem;
+  list-style: none;
+  padding: 1rem;
+  font-weight: 900;
+  line-height: 3rem;
+  color: rgb(157, 159, 163);
+  li {
+    z-index: 3;
   }
-  
-  .left a {
-    text-decoration: none;
-    padding: 0.8rem 1rem;
-    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .hnav {
+    font-size: 1rem;
   }
-  .left a img{
-    width: 8rem;
-  }
-  
-  .right {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .right a {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    background-color: rgb(245, 187, 197);
-  }
-  
-  .right a:hover {
-    background-color: rgb(190, 190, 243, 0.3);
-    text-decoration: dotted underline;
-  }
-  
+
   .home {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom, white, red);
-    position: relative;
-    overflow: hidden;
+    flex-direction: column-reverse;
   }
-  
+
   .img {
-    width: 47%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-    z-index: 3;
-  }
-  
-  .img img {
     width: 100%;
-    max-height: 90vh;
-    border-radius: 0.6rem;
-    z-index: 3;
   }
-  
+
   .Des {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    color: brown;
-    width: 53%;
-    height: 100%;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    width: 100%;
+    border: 1px solid rgb(245, 172, 172);
   }
-  
+
   .Des h1 {
-    color: rgb(73, 108, 157);
-    font-size: 4rem;
-    margin: 2rem;
-    z-index: 3;
+    font-size: 2.5rem;
   }
-  
-  .description {
-    width: 100%;
-    height: 100%;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1rem;
-    line-height: 3rem;
-    color: rgb(83, 116, 161);
-    z-index: 3;
-  }
-  
+
   .highlights {
-    font-size: 2rem;
-    list-style: none;
+    font-size: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+    text-align: center;
     padding: 1rem;
-    font-weight: 900;
-    line-height: 3rem;
-    color: rgb(157, 159, 163);
-    li{
-        z-index: 3;
-    }
   }
-  
-  @media screen and (max-width: 1200px) {
-    .hnav {
-      font-size: 1rem;
-    }
-  
-    .home {
-      flex-direction: column-reverse;
-    }
-  
-    .img {
-      width: 100%;
-    }
-  
-    .Des {
-      border-top-left-radius: 5rem;
-      border-top-right-radius: 5rem;
-      width: 100%;
-      border: 1px solid rgb(245, 172, 172);
-    }
-  
-    .Des h1 {
-      font-size: 2.5rem;
-    }
-  
-    .highlights {
-      font-size: 1.5rem;
-      padding: 1.2rem;
-    }
-  
-    .description {
-      font-size: 1.4rem;
-      text-align: center;
-      padding: 1rem;
-    }
-  }
-  
-  .particle {
-    position: absolute;
-    border-radius: 50%;
-    z-index: 0; /* Ensure particles are below home content */
-  }
-  
-  .backgroundAnimation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Ensure the background is the lowest layer */
-    pointer-events: none; /* Allow clicks to pass through */
-  }
-  .circle {
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0; /* Ensure particles are below home content */
+}
+
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensure the background is the lowest layer */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.circle {
   border-radius: 50%;
 }
 
@@ -174,4 +175,50 @@
   border-right: 15px solid transparent;
   border-bottom: 30px solid;
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 3;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
+
+  .right {
+    display: none;
+    flex-direction: column;
+    /* width: 100%; */
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+    gap:0.5rem;
+    padding: 0.8rem 1.3rem;
+    border-radius: 1rem;
+    background-color: rgb(236, 115, 115);
+  }
+
+  .right.active {
+    display: flex;
+  }
+
+  .hnav {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .hnav .right a {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
 }

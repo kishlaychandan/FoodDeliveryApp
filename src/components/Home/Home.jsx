@@ -1,11 +1,18 @@
 // Home.js
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from "./Home.module.css";
 import anime from "animejs";
 import ChatBots from "../ChatBot/ChatBots";
-import bg from '../../assets/kc-removebg-preview.png'
+import bg from '../../assets/kc-removebg-preview.png';
+
 function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   useEffect(() => {
     const createParticles = () => {
       const numParticles = 50;
@@ -53,12 +60,16 @@ function Home() {
 
   return (
     <>
-      {/* <ChatBots /> */}
       <div className={style.hnav}>
         <div className={style.left}>
           <Link to="/"><img src={bg} alt="" /></Link>
         </div>
-        <div className={style.right}>
+        <div className={style.hamburger} onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={`${style.right} ${isMenuOpen ? style.active : ""}`}>
           <Link to="/signup">SIGNUP</Link>
           <Link to="/signin">LOGIN</Link>
         </div>
