@@ -2,7 +2,7 @@
 
 **KC Restaurant** is a dynamic web application designed to provide users with an interactive and seamless experience for ordering food and tiffin services online. The application features a modern design with engaging background animations, a chatbot for real-time assistance, and various other functionalities to enhance user experience.
 
-![KC Restaurant]('./website.png')
+![KC Restaurant](website.png)
 
 ## 🌟 Features
 
