@@ -29,4 +29,6 @@ To get a local copy up and running, follow these steps:
    ```bash
    git clone https://github.com/yourusername/KC-Restaurant.git
 
-Hosted Link: 
+## Hosted Link
+
+You can access a live demo of the project [here](https://food-delivery-app-ebon.vercel.app/).
