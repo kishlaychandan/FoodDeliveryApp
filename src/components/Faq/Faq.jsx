@@ -57,7 +57,7 @@ function Faq() {
               return (
                 <>
                 <div className={style.card} key={index} onClick={()=>{openClose(index)}}>
-                  <h1>{(item.toogleState)? ">":"v"} {item.quest}</h1>
+                  <h1>{(item.toogleState)? "v":">"} {item.quest}</h1>
                   <p>{(item.toogleState)? item.answer:null}</p>
                 </div>
                 </>
