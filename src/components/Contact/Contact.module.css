@@ -7,25 +7,13 @@
   font-family:cursive;
     display: flex;
     width: 100%;
-    /* background-image: url("https://t4.ftcdn.net/jpg/07/26/62/25/240_F_726622527_rJl0PX7g6u7Q2LvXgNTr24vFUIpehyfO.jpg"); */
-    /* background-image: url(https://t4.ftcdn.net/jpg/07/18/81/45/240_F_718814555_HXgdstEveOjBi4HcLylaUjPus6rWiMKA.jpg); */
-    /* background-image: url(https://t4.ftcdn.net/jpg/04/41/95/71/240_F_441957146_d9m0ICsU0yKm0ANghDm0toNyHBBtWEVT.jpg); */
-    /* background-image: url(https://t3.ftcdn.net/jpg/02/64/00/56/240_F_264005624_NyFEBO7k0OsNMQiI343zBZZ7WH89f6Ls.jpg); */
-
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
-    /* height: 100vh; */
     flex-direction: column;
     gap: 2rem;
+    justify-content: center;
     align-items: center;
-    /* justify-content: center; */
-    /* padding: 2rem; */
-    /* max-width: 800px; */
-    /* background: #f9f9f9; */
     border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    min-height: 80vh;
+    padding: 1.5rem;
   }
   
   .contactContainer img{
@@ -43,7 +31,7 @@
     color: #c8c1c1;
     font-weight: bold;
     text-align: center;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
   }
   
   .contactContainer .contactForm {
@@ -89,7 +77,7 @@
   
   .contactContainer  .textarea {
     height: 150px;
-    resize: vertical;
+    /* resize: vertical; */
   }
   
 .contactContainer  .error {
