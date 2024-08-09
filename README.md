@@ -12,6 +12,7 @@
 - **❓ FAQ**: Find answers to common questions related to services, delivery, and more.
 - **📞 Contact**: Get in touch with us for any inquiries or support.
 - **💬 Chatbot**: A chatbot is available in the bottom left corner to assist with order queries, delivery issues, and more. It toggles open/close on a message icon click.
+- **💵 Payment**: Razorpay payment gateway for making purchasing food.
 - **🔑 Login/Signup**: Secure authentication system powered by Firebase, allowing users to create accounts and log in to manage their orders.
 
 ## 🛠️ Tech Stack
@@ -27,7 +28,7 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/KC-Restaurant.git
+   git clone https://github.com/kishlaychandan/FoodDeliveryApp
 
 ## Hosted Link
 
