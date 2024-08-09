@@ -12,6 +12,7 @@ import OrderStatus from "./components/OrderStatus/OrderStatus";
 import Contact from "./components/Contact/Contact";
 import Menu from "./components/Menu/Menu";
 import Faq from "./components/Faq/Faq";
+import Recipes from "./components/Recipes/Recipes";
 import data from "./components/data";
 import ProtectedRoute from "./protectedRoute";
 import AuthContext from "./AuthContext";
@@ -71,6 +72,7 @@ function App() {
             <Route path="/orderStatus" element={<ProtectedRoute><OrderStatus /></ProtectedRoute>} />
             <Route path="/order-summary" element={<ProtectedRoute><OrderSummary /></ProtectedRoute>} />
             <Route path="/faq" element={<ProtectedRoute><Faq /></ProtectedRoute>} />
+            <Route path="/recipes" element={<ProtectedRoute><Recipes /></ProtectedRoute>} />
             <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
             <Route path="/menu" element={<ProtectedRoute><Menu data={data} /></ProtectedRoute>} />
             <Route path="/tiffin" element={<ProtectedRoute><TiffinService/></ProtectedRoute>} />

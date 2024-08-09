@@ -1,0 +1,104 @@
+.recipeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.inputField {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputField:focus {
+    border-color: #ff6347;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.submitButton {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+.disabled {
+    background-color: #ff6347;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.loadingMessage {
+    font-size: 18px;
+    color: #ff6347;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.errorMessage {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.recipeResult {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recipeResult h2 {
+    margin-bottom: 15px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.recipeResult p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555555;
+}

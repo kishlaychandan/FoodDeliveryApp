@@ -42,6 +42,7 @@ function Navbar() {
             <Link to={"/orderstatus"}>ORDER STATUS</Link>
           </li>
           <li><Link to={"/faq"}>FAQ</Link></li>
+          <li><Link to={"/recipes"}>RECIPES</Link></li>
           
           <li>
             <Link to={"/contact"}>CONTACT</Link>
