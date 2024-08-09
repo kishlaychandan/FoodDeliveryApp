@@ -6,13 +6,15 @@
 
 ## 🌟 Features
 
-- **🍲 Food & Tiffin Service**: Browse through a variety of food items and tiffin services, with detailed information and filtering options.
+- **🍲 Food**: Browse through a variety of food items with detailed information and filtering options to find exactly what you want.
+- **🥘 Tiffin Service**: Explore tiffin services with customizable meal options and durations, allowing you to select the perfect meal plan for your needs.
 - **🛒 Cart**: Easily add, view, and manage your selected items before placing an order.
 - **📦 Order Status**: Check the real-time status of your orders, from preparation to delivery.
 - **❓ FAQ**: Find answers to common questions related to services, delivery, and more.
 - **📞 Contact**: Get in touch with us for any inquiries or support.
 - **💬 Chatbot**: A chatbot is available in the bottom left corner to assist with order queries, delivery issues, and more. It toggles open/close on a message icon click.
-- **💵 Payment**: Razorpay payment gateway for making purchasing food.
+- **💵 Payment**: Seamlessly pay for your food and tiffin services using the Razorpay payment gateway, which ensures secure and efficient transactions. The payment process is integrated into the application, allowing users to complete their purchases with ease.
+- **🍲 Recipes**: Get recipes for various dishes by entering the dish name. The application generates recipes using advanced AI, providing detailed instructions and ingredients.
 - **🔑 Login/Signup**: Secure authentication system powered by Firebase, allowing users to create accounts and log in to manage their orders.
 
 ## 🛠️ Tech Stack
