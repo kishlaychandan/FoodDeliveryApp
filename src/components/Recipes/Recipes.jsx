@@ -4,13 +4,16 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+// import 'google'
+
 function Recipes() {
   const [dish, setDish] = useState("");
   const [recipe, setRecipe] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  const API_KEY = "AIzaSyDL82cBQnkqhjKqXzSYvVQKaD17fhg2Hxk"; // Replace with your actual API key
+ 
+const API_KEY= import.meta.env.VITE_REACT_APP_GEMINI_API_KEY;
+console.log(API_KEY);
 
   async function getRecipe(e) {
     e.preventDefault();

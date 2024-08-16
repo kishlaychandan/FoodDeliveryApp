@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./OrderSummary.module.css";
 import Navbar from "../Navbar/Navbar";
-import { useCart } from "../../CartContext"; // Import the context
+import { useCart } from "../../CartContext"; 
 import FloatingForm from "../FloatingForm/FloatingForm";
 import ChatBots from '../ChatBot/ChatBots';
 import Footer from "../Footer/Footer";
 function OrderSummary() {
-  const { cartItems, clearCart } = useCart(); // Use the context
+  const { cartItems, clearCart } = useCart(); 
   const [address, setAddress] = useState("");
-  const [deliveryCharge] = useState(50); // Example delivery charge
-  const [gst] = useState(18); // Example GST percentage
+  const [deliveryCharge] = useState(50); // delivery charge
+  const [gst] = useState(18); // GST percentage
   const [order, setOrder] = useState(null); // State to hold order details
   const navigate = useNavigate();
 
@@ -62,7 +62,7 @@ function OrderSummary() {
       }
 
       const options = {
-        key: "rzp_test_w14dnADMuDa97D", // Replace with your Razorpay key id
+        key: "rzp_test_w14dnADMuDa97D", 
         amount: totalWithCharges * 100, // Amount in paise
         currency: "INR",
         name: "YummyZone",
