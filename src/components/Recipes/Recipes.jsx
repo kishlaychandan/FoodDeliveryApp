@@ -12,7 +12,7 @@ function Recipes() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
  
-const API_KEY= import.meta.env.VITE_REACT_APP_GEMINI_API_KEY;
+const API_KEY= import.meta.env.VITE_REACT_APP_GEMINI_API;
 console.log(API_KEY);
 
   async function getRecipe(e) {
